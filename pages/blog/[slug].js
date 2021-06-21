@@ -34,9 +34,11 @@ function BlogPage({ title, date, content }) {
       </Head>
 
       <main>
-        <div className='border-b-2 border-gray-200 mb-2 py-4'>
+        <div className='mb-2 py-2'>
           <h2 className='text-3xl font-bold'>{title}</h2>
-          <div className='text-gray-600 text-sm'>{getFormattedDate(date)}</div>
+          <div className='text-gray-600 text-sm mt-2'>
+            {getFormattedDate(date)}
+          </div>
         </div>
         <div
           className='prose prose-green prose-sm sm:prose lg:prose-lg xl:prose-xl mt-10'

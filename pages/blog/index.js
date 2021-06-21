@@ -15,12 +15,12 @@ function Blog({ posts }) {
       <main>
         <h2
           clas
-          dsName='px-8 py-3 my-3 border border-transparent text-base font-bold bg-indigo-100 rounded-md md:py-4 md:text-lg md:px-10'
+          dsName='px-8 py-3 mt-4 border border-transparent text-base font-bold bg-indigo-100 rounded-md md:py-4 md:text-lg md:px-10'
         >
           All Posts
         </h2>
 
-        <div className='space-y-4'>
+        <div className='space-y-4 mt-4'>
           {posts.map((post) => (
             <PostItem
               key={post.slug}

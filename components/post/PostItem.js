@@ -10,13 +10,13 @@ const PostItem = (props) => {
     <div className='border border-gray-100 shadow hover:shadow-md hover:border-gray-200 rounded-md p-4 transition duration-200 ease-in'>
       <h1>
         <Link href={`/blog/${slug}`}>
-          <a className='text-md font-bold'>{`${title}`}</a>
+          <a className='text-lg font-bold hover:text-blue-500'>{`${title}`}</a>
         </Link>
       </h1>
-      <div className='text-gray-600 text-sm'>
+      <div className='text-gray-400 text-sm'>
         <time dateTime={date}>{dateString}</time>
       </div>
-      <p>{excerpt}</p>
+      <p className='mt-3 text-gray-600'>{excerpt}</p>
     </div>
   )
 }
