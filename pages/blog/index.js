@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { me } from '../../data/me'
+import { getBlogPosts } from '../../lib/getPost'
+import PostItem from '../../components/post/PostItem'
 
-function Blog() {
+function Blog({ posts }) {
   return (
     <div>
       <Head>
@@ -12,12 +13,40 @@ function Blog() {
       </Head>
 
       <main>
-        <h2 className='px-8 py-3 my-3 border border-transparent text-base font-bold bg-indigo-100 rounded-md md:py-4 md:text-lg md:px-10'>
+        <h2
+          clas
+          dsName='px-8 py-3 my-3 border border-transparent text-base font-bold bg-indigo-100 rounded-md md:py-4 md:text-lg md:px-10'
+        >
           All Posts
         </h2>
+
+        <div className='space-y-4'>
+          {posts.map((post) => (
+            <PostItem
+              key={post.slug}
+              title={post.title}
+              date={post.date}
+              excerpt={post.excerpt}
+              slug={post.slug}
+            />
+          ))}
+        </div>
       </main>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const allPosts = getBlogPosts()
+  return {
+    props: {
+      posts: allPosts.map(({ data, content, slug }) => ({
+        ...data,
+        content,
+        slug,
+      })),
+    },
+  }
 }
 
 export default Blog
