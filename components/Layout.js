@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Header from './Header'
 import Container from './Container'
 import Footer from './Footer'
+import HeroSection from './Hero'
 
 export default function Layout({ title, keywords, description, children }) {
   const router = useRouter()
@@ -15,7 +15,7 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name='keywords' content={keywords} />
       </Head>
       <Header />
-      {router.pathname === '/' && <></>}
+      {router.pathname === '/about' && <HeroSection />}
       <Container>{children}</Container>
       <Footer />
     </>

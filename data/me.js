@@ -3,6 +3,7 @@ export const me = {
   middlename: 'Zayar',
   lastname: 'Tun',
   fullname: 'Kyaw Zayar Tun',
+  intro: `Hi! My name is Kyaw Zayar Tun. I got a Bachelor degree in Computer Science (B.C.Sc) from the University of Computer Studies, Yangon. I'm an Android developer. I'm also able to build normal web applications. I love learning technologies.`,
   sociallinks: {
     twitter: 'https://twitter.com/ZattWine',
     facebook: 'https://www.facebook.com/zy.98727',
