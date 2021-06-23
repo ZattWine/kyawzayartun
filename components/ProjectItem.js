@@ -3,7 +3,7 @@ import Badge from './Badge'
 
 export default function ProjectItem({ project }) {
   return (
-    <div className='w-full border border-gray-200 shadow m-2 p-4'>
+    <div className='w-full border border-gray-200 shadow p-4'>
       <div className='border-b border-gray-200 py-2'>
         <div className='flex flex-row justify-between'>
           <h1 className='text-xl font-bold'>{project.title}</h1>

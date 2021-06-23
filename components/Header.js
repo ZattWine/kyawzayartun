@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className='flex flex-row space-x-4 items-center justify-between rounded-2xl bg-white text-gray-700 h-12 px-7 border-2 border-gray-100 m-4'>
+    <header className='flex flex-col h-20 text-center items-center rounded-2xl bg-white text-gray-700 border-2 border-gray-100 m-4 pt-4 md:flex-row md:h-14 md:justify-between md:items-center md:space-x-4 md:px-7 md:py-2 md:m-4'>
       <div className='uppercase text-indigo-500 text-base md:text-xl font-bold'>
         <Link href='/'>
           <a>{getPeriodTime()}</a>

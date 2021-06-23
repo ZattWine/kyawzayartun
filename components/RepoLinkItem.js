@@ -4,6 +4,7 @@ export default function RepoLinkItem({ type, url }) {
       className='text-blue-700 hover:text-blue-500'
       href={`${url}`}
       target='_blank'
+      rel='noreferrer'
     >
       {type}
     </a>

@@ -3,7 +3,8 @@ export const me = {
   middlename: 'Zayar',
   lastname: 'Tun',
   fullname: 'Kyaw Zayar Tun',
-  intro: `Hi! My name is Kyaw Zayar Tun. I got a Bachelor degree in Computer Science (B.C.Sc) from the University of Computer Studies, Yangon. I'm an Android developer. I'm also able to build normal web applications. I love learning technologies.`,
+  avatar: '/images/shwedagon-me.jpg',
+  intro: `Hi! I'm Kyaw Zayar Tun. I got a bachelor degree of Computer Science (B.C.Sc) from the University of Computer Studies in 2019, Yangon. I'm an Android developer. I'm also able to build normal web applications and I enjoy to learn new technologies.`,
   sociallinks: {
     twitter: 'https://twitter.com/ZattWine',
     facebook: 'https://www.facebook.com/zy.98727',
@@ -24,17 +25,34 @@ export const me = {
     },
     {
       id: 2,
+      title: 'InInn Support',
+      description: 'Toilet location data entry application',
+      links: [
+        { type: 'GitHub', url: 'https://github.com/ZattWine/speakingpartners' },
+        {
+          type: 'PlayStore',
+          url: 'https://play.google.com/store/apps/details?id=com.lulin.ininn.admin',
+        },
+      ],
+      tags: ['Kotlin', 'Android', 'Firebase'],
+      date: '30/10/2018',
+    },
+    {
+      id: 3,
       title: 'Yoyo Chatt',
       description: 'An flutter chat messaging app.',
       links: [
         { type: 'GitHub', url: 'https://github.com/ZattWine/yoyo_chatt' },
-        { type: 'PlayStore', url: 'https://github' },
+        {
+          type: 'PlayStore',
+          url: 'https://play.google.com/store/apps/details?id=com.norm.yoyo_chatt',
+        },
       ],
       tags: ['Android', 'Flutter', 'Firebase'],
       date: '22/01/2021',
     },
     {
-      id: 3,
+      id: 4,
       title: 'Hyundai - SMS',
       description: 'A web application for Hyundai service.',
       links: [
@@ -45,7 +63,7 @@ export const me = {
       date: '19/07/2018',
     },
     {
-      id: 4,
+      id: 5,
       title: 'Chattogether - RMI',
       description: 'A simple chat app using java rmi. Third year Java project.',
       links: [
@@ -55,7 +73,7 @@ export const me = {
       date: '',
     },
     {
-      id: 5,
+      id: 6,
       title: 'News',
       description:
         'Simple news app consuming news api from https://newsapi.org/',
@@ -64,7 +82,7 @@ export const me = {
       date: '20/01/2020',
     },
     {
-      id: 6,
+      id: 7,
       title: 'Node Shop - Node',
       description:
         'Simple Online Shop is a sample web application using NodeJS.',
@@ -82,7 +100,7 @@ export const me = {
       date: '31/05/2021',
     },
     {
-      id: 7,
+      id: 8,
       title: 'Pro Shop - React & Node',
       description:
         'A pratical shopping app using node, react and react-bootstrap.',
@@ -100,7 +118,7 @@ export const me = {
       date: '18/06/2021',
     },
     {
-      id: 8,
+      id: 9,
       title: 'DJ Events - Next',
       description:
         'This is an app to find the latest DJ and other musical events.',

@@ -10,10 +10,10 @@ export default function AboutPage() {
           <div className='flex bg-gray-200 rounded-full p-1 cursor-pointer'>
             <Image
               className='rounded-full'
-              src='/images/me.jpg'
+              src={me.avatar}
               objectFit='cover'
-              width={80}
-              height={80}
+              width={100}
+              height={100}
               alt='Profile photo of author.'
             />
           </div>

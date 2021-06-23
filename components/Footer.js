@@ -4,7 +4,7 @@ import { me } from '@/data/me'
 
 export default function Footer() {
   return (
-    <footer className='flex flex-col space-x-4 border-t p-12'>
+    <footer className='flex flex-col space-x-4 border-t p-12 mt-12'>
       <p className='text-center text-gray-500'>
         Copyright &copy; {getCurrentYear()} . {me.fullname}
       </p>
@@ -14,6 +14,7 @@ export default function Footer() {
             <a
               href={me.sociallinks.twitter}
               target='_blank'
+              rel='noreferrer'
               className='hover:text-blue-500'
             >
               <FaTwitter />
@@ -23,6 +24,7 @@ export default function Footer() {
             <a
               href={me.sociallinks.facebook}
               target='_blank'
+              rel='noreferrer'
               className='hover:text-blue-800'
             >
               <FaFacebook />
@@ -32,6 +34,7 @@ export default function Footer() {
             <a
               href={me.sociallinks.github}
               target='_blank'
+              rel='noreferrer'
               className='hover:text-gray-800'
             >
               <FaGithub />
@@ -41,6 +44,7 @@ export default function Footer() {
             <a
               href={`mailto:${me.sociallinks.email}`}
               target='_blank'
+              rel='noreferrer'
               className='hover:text-red-500'
             >
               <FaEnvelope />
