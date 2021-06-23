@@ -2,7 +2,15 @@ import Layout from '@/components/Layout'
 import ProjectItem from '@/components/ProjectItem'
 import { me } from '@/data/me'
 
+function sortByProperty(value) {
+  return function (a, b) {
+    if (a[value] < b[value]) return 1
+    else if (a[value] > b[value]) return -1
+  }
+}
+
 export default function HomePage() {
+  const sortedProjects = me.projects.sort(sortByProperty('id'))
   return (
     <Layout>
       <main>
@@ -24,10 +32,10 @@ export default function HomePage() {
             Just practice projects and not good personal projects. But they are
             my memories and I enjoy them and I hope you does.
           </p>
-          {me.projects.length === 0 && <h2>No projects found.</h2>}
+          {sortedProjects.length === 0 && <h2>No projects found.</h2>}
           <div className='mt-4 grid md:grid-cols-2 gap-4'>
-            {me.projects.length > 0 &&
-              me.projects.map((p) => <ProjectItem key={p.id} project={p} />)}
+            {sortedProjects.length > 0 &&
+              sortedProjects.map((p) => <ProjectItem key={p.id} project={p} />)}
           </div>
         </div>
       </main>
