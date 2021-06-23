@@ -1,4 +1,5 @@
 import RepoLinkItem from './RepoLinkItem'
+import Badge from './Badge'
 
 export default function ProjectItem({ project }) {
   return (
@@ -12,11 +13,18 @@ export default function ProjectItem({ project }) {
       <div className='p-2 border-b'>
         <p className='text-gray-500'>{project.description}</p>
       </div>
-      <div className='py-2 flex flex-row space-x-4 justify-end'>
-        {project.links.length > 0 &&
-          project.links.map((i) => (
-            <RepoLinkItem key={i.type} type={i.type} url={i.url} />
-          ))}
+      <div className='py-2 flex flex-row space-x-4 justify-between'>
+        <div className='flex flex-row space-x-2'>
+          {project.tags.length > 0 &&
+            project.tags.map((i, idx) => <Badge key={idx} title={i} />)}
+        </div>
+
+        <div className='flex flex-row space-x-4'>
+          {project.links.length > 0 &&
+            project.links.map((i) => (
+              <RepoLinkItem key={i.type} type={i.type} url={i.url} />
+            ))}
+        </div>
       </div>
     </div>
   )
