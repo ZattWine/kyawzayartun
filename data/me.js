@@ -8,6 +8,7 @@ export const me = {
     twitter: 'https://twitter.com/ZattWine',
     facebook: 'https://www.facebook.com/zy.98727',
     github: 'https://github.com/ZattWine',
+    email: 'kyawzayartun.dev@gmail.com',
   },
   projects: [
     {
@@ -84,7 +85,7 @@ export const me = {
       id: 7,
       title: 'Pro Shop - React & Node',
       description:
-        'A pratical shopping app using node, react and react-bootstrap. This project is just practicing the udemy course from https://www.udemy.com/course/mern-ecommerce/',
+        'A pratical shopping app using node, react and react-bootstrap.',
       links: [
         {
           type: 'Github',

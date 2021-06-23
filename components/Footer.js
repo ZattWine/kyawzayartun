@@ -1,4 +1,4 @@
-import { FaGithub, FaFacebook, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaFacebook, FaTwitter, FaEnvelope } from 'react-icons/fa'
 import { getCurrentYear } from '@/lib/datetimeUtils'
 import { me } from '@/data/me'
 
@@ -35,6 +35,15 @@ export default function Footer() {
               className='hover:text-gray-800'
             >
               <FaGithub />
+            </a>
+          </li>
+          <li>
+            <a
+              href={`mailto:${me.sociallinks.email}`}
+              target='_blank'
+              className='hover:text-red-500'
+            >
+              <FaEnvelope />
             </a>
           </li>
         </ul>
