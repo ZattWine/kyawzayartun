@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { getFormattedDate } from '../../lib/datetimeUtils'
 
 const PostItem = (props) => {
-  console.log(props)
   const { title, date, excerpt, slug } = props
   const dateString = getFormattedDate(date)
 

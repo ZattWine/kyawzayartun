@@ -1,0 +1,23 @@
+import RepoLinkItem from './RepoLinkItem'
+
+export default function ProjectItem({ project }) {
+  return (
+    <div className='w-full border border-gray-200 shadow m-2 p-4'>
+      <div className='border-b border-gray-200 py-2'>
+        <div className='flex flex-row justify-between'>
+          <h1 className='text-xl font-bold'>{project.title}</h1>
+          <span className='text-gray-500'>{project.date}</span>
+        </div>
+      </div>
+      <div className='p-2 border-b'>
+        <p className='text-gray-500'>{project.description}</p>
+      </div>
+      <div className='py-2 flex flex-row space-x-4 justify-end'>
+        {project.links.length > 0 &&
+          project.links.map((i) => (
+            <RepoLinkItem key={i.type} type={i.type} url={i.url} />
+          ))}
+      </div>
+    </div>
+  )
+}
