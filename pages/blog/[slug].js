@@ -1,15 +1,17 @@
-import Head from 'next/head'
+import Link from 'next/link'
+import { FaArrowLeft } from 'react-icons/fa'
 import { getBlogPosts } from '../../lib/getPost'
 import markdownToHtml from '../../lib/markdownToHtml'
-import { getFormattedDate } from '../../lib/dateFormatter'
+import { getFormattedDate } from '../../lib/datetimeUtils'
 import { Remarkable } from 'remarkable'
 import { linkify } from 'remarkable/linkify'
 import hljs from 'highlight.js'
+import Layout from '@/components/Layout'
 
 // import 'prismjs/themes/prism.css'
 import 'highlight.js/styles/github-dark.css'
 
-function BlogPage({ title, date, content }) {
+function BlogViewPage({ title, date, content }) {
   const md = new Remarkable('full', {
     highlight: function (str, lang) {
       if (lang && hljs.getLanguage(lang)) {
@@ -27,12 +29,7 @@ function BlogPage({ title, date, content }) {
   }).use(linkify)
 
   return (
-    <div>
-      <Head>
-        <title>{title}</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
+    <Layout title={title}>
       <main>
         <div className='mb-2 py-2'>
           <h2 className='text-3xl font-bold'>{title}</h2>
@@ -45,7 +42,13 @@ function BlogPage({ title, date, content }) {
           dangerouslySetInnerHTML={{ __html: md.render(content) }}
         />
       </main>
-    </div>
+
+      <div className='mt-4'>
+        <Link href='/blog'>
+          <a className='text-sm text-indigo-500'>{`< Go Back`}</a>
+        </Link>
+      </div>
+    </Layout>
   )
 }
 
@@ -74,4 +77,4 @@ export async function getStaticPaths() {
   }
 }
 
-export default BlogPage
+export default BlogViewPage

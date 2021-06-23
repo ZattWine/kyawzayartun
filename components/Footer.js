@@ -1,19 +1,43 @@
-import Link from 'next/link'
-import { me } from '../data/me'
+import { FaGithub, FaFacebook, FaTwitter } from 'react-icons/fa'
+import { getCurrentYear } from '@/lib/datetimeUtils'
+import { me } from '@/data/me'
 
 export default function Footer() {
   return (
-    <footer className='text-center bg-black py-4 mt-4'>
-      <div className='flex flex-row space-x-4 justify-between'>
-        <div className='ml-2'>
-          <Link href='/'>
-            <a className='text-gray-400'>E-Mail</a>
-          </Link>
-        </div>
-        <p className='text-gray-400 text-xl mr-2'>
-          Copyright &copy; {new Date().getFullYear()} .{' '}
-          {`${me.firstname} ${me.middlename} ${me.lastname}`}
-        </p>
+    <footer className='flex flex-col space-x-4 border-t p-12'>
+      <p className='text-center text-gray-500'>
+        Copyright &copy; {getCurrentYear()} . {me.fullname}
+      </p>
+      <div className='mt-4 self-center'>
+        <ul className='flex flex-row space-x-4 text-2xl text-gray-500'>
+          <li>
+            <a
+              href={me.sociallinks.twitter}
+              target='_blank'
+              className='hover:text-blue-500'
+            >
+              <FaTwitter />
+            </a>
+          </li>
+          <li>
+            <a
+              href={me.sociallinks.facebook}
+              target='_blank'
+              className='hover:text-blue-800'
+            >
+              <FaFacebook />
+            </a>
+          </li>
+          <li>
+            <a
+              href={me.sociallinks.github}
+              target='_blank'
+              className='hover:text-gray-800'
+            >
+              <FaGithub />
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   )

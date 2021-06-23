@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { getFormattedDate } from '../../lib/dateFormatter'
+import { getFormattedDate } from '../../lib/datetimeUtils'
 
 const PostItem = (props) => {
   console.log(props)
