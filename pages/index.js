@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import Layout from '@/components/Layout'
 import ProjectItem from '@/components/ProjectItem'
 import { me } from '@/data/me'
@@ -14,23 +13,20 @@ function sortByProperty(value) {
 
 export default function HomePage() {
   const sortedProjects = me.projects.sort(sortByProperty('id'))
-  const avatarHref = me.avatar
   return (
     <Layout>
       <main>
         <div className='my-8'>
           <div className='flex flex-row text-center justify-center'>
             <div className='flex bg-gray-200 rounded-full p-1 cursor-pointer'>
-              <Link href={avatarHref} passHref>
-                <Image
-                  className='rounded-full'
-                  src={me.avatar}
-                  objectFit='cover'
-                  width={100}
-                  height={100}
-                  alt='Profile photo of author.'
-                />
-              </Link>
+              <Image
+                className='rounded-full'
+                src={me.avatar}
+                objectFit='cover'
+                width={100}
+                height={100}
+                alt='Profile photo of author.'
+              />
             </div>
           </div>
 
