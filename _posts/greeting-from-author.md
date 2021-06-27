@@ -7,6 +7,4 @@ author:
   avatar: '/images'
 ---
 
-# Mingalapar
-
-Hi, nice to meet you guys. I'm `Kyaw Zayar Tun`. Warmly welcome to my blog.
+Hello guys, nice to meet you all. I'm `Kyaw Zayar Tun` and warmly welcome to my blog.
