@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <div className='flex flex-col h-48 text-center'>
+    <div className='flex flex-col h-80 text-center'>
       <h1 className='font-bold text-6xl'>Mingalapar</h1>
       <h2 className='text-xl uppercase text-indigo-500 my-4'>
         Have a great day?
