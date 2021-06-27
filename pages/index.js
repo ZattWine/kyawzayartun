@@ -1,8 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Layout from '@/components/Layout'
 import ProjectItem from '@/components/ProjectItem'
 import { me } from '@/data/me'
 
+/* sorting helper function */
 function sortByProperty(value) {
   return function (a, b) {
     if (a[value] < b[value]) return 1
@@ -18,14 +20,16 @@ export default function HomePage() {
         <div className='my-8'>
           <div className='flex flex-row text-center justify-center'>
             <div className='flex bg-gray-200 rounded-full p-1 cursor-pointer'>
-              <Image
-                className='rounded-full'
-                src={me.avatar}
-                objectFit='cover'
-                width={100}
-                height={100}
-                alt='Profile photo of author.'
-              />
+              <Link href={me.avatar}>
+                <Image
+                  className='rounded-full'
+                  src={me.avatar}
+                  objectFit='cover'
+                  width={100}
+                  height={100}
+                  alt='Profile photo of author.'
+                />
+              </Link>
             </div>
           </div>
 
