@@ -14,13 +14,14 @@ function sortByProperty(value) {
 
 export default function HomePage() {
   const sortedProjects = me.projects.sort(sortByProperty('id'))
+  const avatarHref = me.avatar
   return (
     <Layout>
       <main>
         <div className='my-8'>
           <div className='flex flex-row text-center justify-center'>
             <div className='flex bg-gray-200 rounded-full p-1 cursor-pointer'>
-              <Link href={me.avatar}>
+              <Link href={avatarHref} passHref>
                 <Image
                   className='rounded-full'
                   src={me.avatar}
