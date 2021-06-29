@@ -13,9 +13,9 @@ module.exports = {
           css: {
             color: '#333',
             a: {
-              color: '#3182ce',
+              color: 'rgba(4, 120, 87, 1)',
               '&:hover': {
-                color: '#2c5282',
+                color: 'rgba(16, 185, 129, 1)',
               },
             },
             code: {

@@ -18,9 +18,8 @@ export default function HomePage() {
       <main>
         <div className='my-8'>
           <div className='flex flex-row text-center justify-center'>
-            <div className='flex bg-gray-200 rounded-full p-1 cursor-pointer'>
+            <div className='flex border-2 border-gray-200 shadow-md rounded-full overflow-hidden cursor-pointer'>
               <Image
-                className='rounded-full'
                 src={me.avatar}
                 objectFit='cover'
                 width={100}

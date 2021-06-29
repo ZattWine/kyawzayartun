@@ -45,7 +45,9 @@ function BlogViewPage({ title, date, content }) {
 
       <div className='mt-4'>
         <Link href='/blog'>
-          <a className='text-sm text-indigo-500'>{`< Go Back`}</a>
+          <a className='text-sm text-green-700 bg-green-100 rounded-md hover:bg-green-200 p-2'>
+            Go Back
+          </a>
         </Link>
       </div>
     </Layout>
