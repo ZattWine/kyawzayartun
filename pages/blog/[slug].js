@@ -1,14 +1,10 @@
 import Link from 'next/link'
-import { FaArrowLeft } from 'react-icons/fa'
 import { getBlogPosts } from '../../lib/getPost'
-import markdownToHtml from '../../lib/markdownToHtml'
 import { getFormattedDate } from '../../lib/datetimeUtils'
 import { Remarkable } from 'remarkable'
 import { linkify } from 'remarkable/linkify'
 import hljs from 'highlight.js'
 import Layout from '@/components/Layout'
-
-// import 'prismjs/themes/prism.css'
 import 'highlight.js/styles/github-dark.css'
 
 function BlogViewPage({ title, date, content }) {
@@ -58,7 +54,6 @@ export async function getStaticProps(context) {
   const { params } = context
   const allPosts = getBlogPosts()
   const { data, content } = allPosts.find((item) => item.slug === params.slug)
-  // const htmlContent = await markdownToHtml(content || '')
   return {
     props: {
       ...data,
