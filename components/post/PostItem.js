@@ -6,7 +6,7 @@ const PostItem = (props) => {
   const dateString = getFormattedDate(date)
 
   return (
-    <Link href={`/blog/${slug}`}>
+    <Link href={`/blog/${slug}`} passHref>
       <div className='border border-gray-100 shadow hover:shadow-md hover:border-gray-200 hover:text-green-500 rounded-md p-4 transition duration-200 ease-in cursor-pointer'>
         <h1 className='text-lg font-bold'>{title}</h1>
         <div className='text-gray-400 text-sm'>
