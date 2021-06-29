@@ -4,7 +4,7 @@ export const me = {
   lastname: 'Tun',
   fullname: 'Kyaw Zayar Tun',
   avatar: '/images/shwedagon-me.jpg',
-  intro: `Hi! I'm Kyaw Zayar Tun. I got a bachelor degree of Computer Science (B.C.Sc) from the University of Computer Studies, Yangon in 2019. I'm an Android developer. I'm also able to build normal web applications and I enjoy to learn new technologies.`,
+  intro: `Hello! I'm Kyaw Zayar Tun and you can call me Zayar. I'm a software developer from Myanmar. I'm trying to be a software engineer and always try to build the beautiful things arround the world.`,
   sociallinks: {
     twitter: 'https://twitter.com/ZattWine',
     facebook: 'https://www.facebook.com/zy.98727',
