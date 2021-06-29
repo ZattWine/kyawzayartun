@@ -58,7 +58,7 @@ export async function getStaticProps(context) {
   const { params } = context
   const allPosts = getBlogPosts()
   const { data, content } = allPosts.find((item) => item.slug === params.slug)
-  const htmlContent = await markdownToHtml(content || '')
+  // const htmlContent = await markdownToHtml(content || '')
   return {
     props: {
       ...data,
