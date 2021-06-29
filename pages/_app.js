@@ -1,6 +1,5 @@
 import ProgressBar from '@badrap/bar-of-progress'
 import Router from 'next/router'
-// import { motion } from 'framer-motion'
 import '@/styles/globals.css'
 
 const progress = new ProgressBar({
