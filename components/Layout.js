@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
 import Header from './Header'
 import Container from './Container'
 import Footer from './Footer'
@@ -15,8 +16,23 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name='keywords' content={keywords} />
       </Head>
       <Header />
-      {router.pathname === '/about' && <HeroSection />}
-      <Container>{children}</Container>
+      <motion.div
+        key={router.route}
+        initial='pageInitial'
+        animate='pageAnimate'
+        transition={{ delay: 0.2 }}
+        variants={{
+          pageInitial: {
+            opacity: 0,
+          },
+          pageAnimate: {
+            opacity: 1,
+          },
+        }}
+      >
+        {router.pathname === '/about' && <HeroSection />}
+        <Container>{children}</Container>
+      </motion.div>
       <Footer />
     </>
   )
