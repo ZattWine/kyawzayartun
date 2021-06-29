@@ -1,12 +1,26 @@
+import { useEffect, useState } from 'react'
 import { getPeriodTime } from '@/lib/datetimeUtils'
 import Link from 'next/link'
 
 export default function Header() {
+  const initialGreetingText = getPeriodTime()
+  const [greetingText, setGreetingText] = useState(initialGreetingText)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setGreetingText('Welcome!')
+    }, 3000)
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [])
+
   return (
     <header className='flex flex-col text-center items-center rounded-2xl bg-white text-gray-700 m-4 pt-4 md:flex-row md:justify-between md:items-center md:space-x-4 md:px-7 md:py-2 md:m-4'>
       <div className='uppercase text-green-700 text-3xl font-bold'>
         <Link href='/'>
-          <a>{getPeriodTime()}</a>
+          <a>{greetingText}</a>
         </Link>
       </div>
       <nav>
