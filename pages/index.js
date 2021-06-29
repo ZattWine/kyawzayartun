@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import Layout from '@/components/Layout'
 import ProjectItem from '@/components/ProjectItem'
 import { me } from '@/data/me'
@@ -13,6 +14,26 @@ function sortByProperty(value) {
 
 export default function HomePage() {
   const sortedProjects = me.projects.sort(sortByProperty('id'))
+
+  const sentence = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.08,
+      },
+    },
+  }
+
+  const letter = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  }
+
   return (
     <Layout>
       <main>
@@ -30,13 +51,24 @@ export default function HomePage() {
           </div>
 
           <div className='flex flex-row text-center justify-center my-2'>
-            <h1 className='text-xl font-bold my-2'>{me.fullname}</h1>
+            <h3 className='text-xl font-bold my-2'>{me.fullname}</h3>
           </div>
 
           <div className='flex flex-row text-center justify-center my-2'>
-            <p className='text-gray-500 text-base max-w-screen-sm'>
-              {me.intro}
-            </p>
+            <motion.p
+              className='text-gray-500 text-base max-w-screen-sm'
+              variants={sentence}
+              initial='hidden'
+              animate='visible'
+            >
+              {me.intro.split('').map((char, idx) => {
+                return (
+                  <motion.span key={`${char}-${idx}`} variants={letter}>
+                    {char}
+                  </motion.span>
+                )
+              })}
+            </motion.p>
           </div>
         </div>
 

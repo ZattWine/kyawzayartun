@@ -8,7 +8,7 @@ export default function Header() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setGreetingText('Welcome!')
+      setGreetingText('Nice To Meet You!')
     }, 3000)
 
     return () => {
@@ -18,9 +18,11 @@ export default function Header() {
 
   return (
     <header className='flex flex-col text-center items-center rounded-2xl bg-white text-gray-700 m-4 pt-4 md:flex-row md:justify-between md:items-center md:space-x-4 md:px-7 md:py-2 md:m-4'>
-      <div className='uppercase text-green-700 text-3xl font-bold'>
+      <div>
         <Link href='/'>
-          <a>{greetingText}</a>
+          <a className='uppercase text-green-700 text-3xl font-bold'>
+            <h3>{greetingText}</h3>
+          </a>
         </Link>
       </div>
       <nav>
