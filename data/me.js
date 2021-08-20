@@ -5,8 +5,10 @@ export const me = {
   fullname: 'Kyaw Zayar Tun',
   avatar: '/images/shwedagon-me.jpg',
   intro: `Hello! I'm Kyaw Zayar Tun and you can call me Zayar. I'm a software developer from Myanmar. I'm trying to be a software engineer and always try to build the beautiful things arround the world.`,
+  resume_link:
+    'https://drive.google.com/file/d/1GsBjWIKDm-CXSycGgacXCh7L-B787x9l/view?usp=sharing',
   sociallinks: {
-    twitter: 'https://twitter.com/ZattWine',
+    twitter: 'https://twitter.com/kyawzayartun98',
     facebook: 'https://www.facebook.com/zy.98727',
     github: 'https://github.com/ZattWine',
     email: 'kyawzayartun.dev@gmail.com',

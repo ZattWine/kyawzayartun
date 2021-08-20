@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Header from './Header'
 import Container from './Container'
 import Footer from './Footer'
-import HeroSection from './Hero'
 
 export default function Layout({ title, keywords, description, children }) {
   const router = useRouter()
@@ -30,7 +29,7 @@ export default function Layout({ title, keywords, description, children }) {
           },
         }}
       >
-        {router.pathname === '/about' && <HeroSection />}
+        {/* {router.pathname === '/about' && <HeroSection />} */}
         <Container>{children}</Container>
       </motion.div>
       <Footer />

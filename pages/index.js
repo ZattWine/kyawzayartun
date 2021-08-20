@@ -37,7 +37,7 @@ export default function HomePage() {
   return (
     <Layout>
       <main>
-        <div className='my-8'>
+        <div className='my-2'>
           <div className='flex flex-row text-center justify-center'>
             <div className='flex border-2 border-gray-200 shadow-md rounded-full overflow-hidden cursor-pointer'>
               <Image
@@ -51,7 +51,16 @@ export default function HomePage() {
           </div>
 
           <div className='flex flex-row text-center justify-center my-2'>
-            <h3 className='text-xl font-bold my-2'>{me.fullname}</h3>
+            <h1 className='text-xl font-bold my-2'>{me.fullname}</h1>
+          </div>
+
+          <div className='flex flex-row text-center justify-center my-4'>
+            <a
+              href={me.resume_link}
+              className='p-2 rounded-md bg-green-500 text-white text-sm hover:bg-green-400 transition duration-300 ease-in-out'
+            >
+              Download Resume
+            </a>
           </div>
 
           <div className='flex flex-row text-center justify-center my-2'>
@@ -72,7 +81,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className='mt-4'>
+        {/* <div className='mt-4'>
           <h2 className='text-xl uppercase font-bold'>My Projects</h2>
           <p className='mt-4 text-gray-500'>
             Just practice projects and not good personal projects. But they are
@@ -83,7 +92,7 @@ export default function HomePage() {
             {sortedProjects.length > 0 &&
               sortedProjects.map((p) => <ProjectItem key={p.id} project={p} />)}
           </div>
-        </div>
+        </div> */}
       </main>
     </Layout>
   )
